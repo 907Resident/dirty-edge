@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last Town Before Utah — Dirty Edge · Fruita, CO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg:        #1a1814;
+      --surface:   #201e1b;
+      --text:      #e8e2d9;
+      --muted:     #9a9088;
+      --accent:    #c4714a;
+      --accent-lt: #d4896a;
+      --max-w:     720px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero video ─────────────────────────────────────────── */
+
+    .hero {
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .hero video {
+      width: 100%;
+      display: block;
+      max-height: 70vh;
+      object-fit: cover;
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+
+    .site-header {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 2.5rem;
+      border-bottom: 1px solid #2e2a26;
+    }
+
+    .site-header .byline {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    h1.title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 3.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      margin-top: 0.75rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Main content ───────────────────────────────────────── */
+
+    .content {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    /* ── Section headings ───────────────────────────────────── */
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 3rem 0 1rem;
+      line-height: 1.25;
+    }
+
+    /* ── Body paragraphs ────────────────────────────────────── */
+
+    p {
+      margin-bottom: 1.6rem;
+      color: var(--text);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Figures / photos ───────────────────────────────────── */
+
+    figure {
+      margin: 2.5rem 0;
+    }
+
+    figure img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+      /* subtle warm vignette feel */
+      filter: brightness(0.95) contrast(1.02);
+    }
+
+    figcaption {
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      min-height: 1.2em; /* preserves space for captions added later */
+    }
+
+    /* ── Pull accent rule ───────────────────────────────────── */
+
+    .accent-rule {
+      border: none;
+      border-top: 2px solid var(--accent);
+      width: 3rem;
+      margin: 2.5rem 0;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+
+    footer {
+      border-top: 1px solid #2e2a26;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    footer span {
+      color: var(--accent-lt);
+    }
+
+    /* ── Mobile ─────────────────────────────────────────────── */
+
+    @media (max-width: 600px) {
+      .hero video {
+        max-height: 55vw;
+      }
+
+      .site-header {
+        padding: 2.5rem 1.25rem 2rem;
+      }
+
+      .content {
+        padding: 2rem 1.25rem 4rem;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1.25rem;
+      }
+
+      h2 {
+        margin-top: 2.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero video ─────────────────────────────────────── -->
+  <div class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="/video/hero.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- ── Page header ────────────────────────────────────── -->
+  <header class="site-header">
+    <p class="byline">Authored by M. Ajayi &nbsp;|&nbsp; Melanated Lovelies</p>
+    <h1 class="title">Last Town Before Utah</h1>
+    <p class="subtitle">Dirty Edge &lt;&gt; Fruita, CO</p>
+  </header>
+
+  <!-- ── Article body ───────────────────────────────────── -->
+  <main class="content">
+
+    <h2>33 Miles at the Edge</h2>
+
+    <p>Colorado is home to numerous gravel races every season. Most enthusiasts will be aware of the stalwarts such as Steamboat Gravel (SBT), The Rad, and FoCo Fondo. These events fill their fields fast with scores of riders and carry a certain established weight in the gravel cycling community. The Dirty Edge is none of those things, and that is precisely the point. Shepherded by Gemini Adventures, this small, unpretentious 50km (33 mi) race at the western edge of the state draws a fraction of the field sizes seen elsewhere, which gives it a character all its own. Routed through the North Fruita Desert, the course wastes no time: riders encounter a medley of off-road surfaces before an out-and-back ascent through a stark canyon flanked by the Book Cliffs, which creates a setting that makes the racing feel earned.</p>
+
+    <hr class="accent-rule" />
+
+    <h2>Getting There</h2>
+
+    <p>For Coloradans living along the northern Front Range, Fruita is a 3.5–4.5 hour drive that earns its keep. I-70 westbound is genuinely scenic: the highway climbs through the Rockies past Breckenridge and Vail, and for those who are not in a rush, either makes a worthwhile stop before the descent into the high desert on the western slope. Arriving in the last meaningful town before crossing the state line into Utah, the landscape surrounding Fruita shifts decisively. Red rock, sepia, and tan replace the gradient greens and blues of the alpine mountains.</p>
+
+    <p>The town announces its identity early with a bike shop that anchors the main drag and a dinosaur riding a bicycle that stands out in downtown without irony. One cannot amble down a block of the downtown area without seeing a fellow biker; it becomes clear quickly that bikes are not a weekend hobby here, they are part of the culture. Getting to the start line from downtown adds one more small adventure. The drive spans twelve miles through a fractional road system (do not miss the turn onto N 3/10 Road) before connecting to 18 Road, a seemingly freshly paved surface, and heading north into the desert.</p>
+
+    <figure>
+      <img src="/images/photo1.jpg" alt="Fruita, Colorado" />
+      <figcaption></figcaption>
+    </figure>
+
+    <hr class="accent-rule" />
+
+    <h2>On Course</h2>
+
+    <p>When the gun goes off, the slim peloton (less than 100 riders) paces out of the staging area with a neutral start. Once released, the racers begin their opening efforts across undulating terrain. This doubletrack and ATV road continues with several punches in elevation that will require sub-30 second pulses of power to traverse. Approaching the completion of the first third of the race, the riders exit on to their first sustained descent on a gravel road before hanging a left toward the canyon.</p>
+
+    <p>The climb begins with a slight gradient along kitty litter gravel topping a hard dirt surface. After starting to get comfortable, the pebbles under your tires give way to the bare dirt surface, which was softly rutted at the time of racing. In the final phase of the climb, earmarked by cattle guards, the grade pitches upward into the double digits for the remaining part of the ascent before meeting the aid crew at the turnaround spot and beginning the descent. This descent is a bit technical for the beginner rider with the oncoming ascending bike traffic (thankfully nowhere near a Denver rush hour) and navigating those same ruts that were just previously channeling the climb. However, when the spread of stones finds your wheels again, the full effect of the flowing descent can be appreciated.</p>
+
+    <figure>
+      <img src="/images/photo2.jpg" alt="Course terrain, North Fruita Desert" />
+      <figcaption></figcaption>
+    </figure>
+
+    <p>The final four-mile push toward the finish starts with the rider hanging a left and heading south toward the starting line. To make sure the racers stay on their toes, this segment includes two brief climbs and a final kicker before the course empties the peloton onto 18 Road for a final dash toward a hairpin turn toward the finish line.</p>
+
+    <hr class="accent-rule" />
+
+    <h2>The Honest Pitch</h2>
+
+    <p>The honest pitch for Dirty Edge is simple: Fruita is worth the drive before the race even enters the conversation. The trails, the town, and the landscape do enough on their own. The race is just the structure that finally gets you out there with a number on your bike. For the seasoned racer, Dirty Edge provides a low-pressure day out on the bike that still has some competition and a clock attached to it. For gravel riders who have been curious about MTB-adjacent terrain without committing to a full suspension build, the course is a natural entry point; it is technical enough to be interesting and short enough that mistakes are survivable. At 50km, it fits cleanly into a weekend rather than consuming one. No PTO needed for most, drive out on Saturday and pre-ride, pin your number on your bike on Sunday, and still make it home before dark.</p>
+
+    <figure>
+      <img src="/images/photo3.jpg" alt="Dirty Edge finish" />
+      <figcaption></figcaption>
+    </figure>
+
+    <p>Dirty Edge is a great excuse to visit the western slope. Out in Fruita, the roads are unhurried, the trails are dusty, the beer is cold, and the race still feels like it belongs to the people who show up. Do not wait too long, sign up for the next one.</p>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer>
+    <span>Melanated Lovelies</span>
+    <span>Dirty Edge · Fruita, CO</span>
+  </footer>
+
+</body>
+</html>
